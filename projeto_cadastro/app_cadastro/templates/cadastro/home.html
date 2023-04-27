@@ -1,0 +1,17 @@
+
+    
+{% extends 'cadastro/base.html' %}
+{% block conteudo %}  
+<form action="{% url 'listagem_cadastro' %}" method="post"> <!--post enviar dados-->
+  {% csrf_token %}
+  <div class="container">
+    <h1 class="mt-5 text-center">Cadastro de produtos</h1>
+    Produto<input name="produto" type="text" class="form-control">
+    Valor <input name="valor" type="text" class="form-control">
+    Quantidade <input name="quantidade" type="text" class="form-control">
+    <br>
+    <button class="btn btn-primary">Cadastrar</button>
+  </div>
+</form>
+{% endblock %}      
+  
